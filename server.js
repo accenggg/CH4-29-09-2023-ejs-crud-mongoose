@@ -13,7 +13,7 @@ mongoose
     useNewUrlParser: true,
   })
   .then(() => console.log("DB sukses terkoneksi"))
-  .catch((err) => err)
+  .catch((err) => console.log(err))
 
 app.listen(port, () => {
   console.log(`App running on port ${port}...`)
