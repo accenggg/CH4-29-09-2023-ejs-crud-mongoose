@@ -41,8 +41,19 @@ app.use((req, res, next) => {
   next()
 })
 
+app.use((req, res, next) => {
+  const clientIp =
+    req.headers["x-forwarded-for"] ||
+    req.connection.remoteAddress
+  console.log("Client IP:", clientIp)
+  next()
+})
+
 app.use("/api/v1/tours", tourRouter)
 app.use("/api/v1/users", userRouter)
 app.use("/", adminRouter)
+app.get("*", (req, res) => {
+  res.send("Cek ke routes /dashboard")
+})
 
 module.exports = app
