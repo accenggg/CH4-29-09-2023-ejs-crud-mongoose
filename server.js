@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000
 
 // Mulai koneksi ke database
 mongoose
-  .connect(process.env.DATABASE_URI)
+  .connect(process.env.MONGODB_URI)
   .then(async () => {
     console.log("DB sukses terkoneksi")
 
