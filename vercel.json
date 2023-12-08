@@ -9,31 +9,31 @@
   "routes": [
     {
       "src": "/dashboard/add",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/dashboard/edit/:id",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/dashboard/delete/:id",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/dashboard/update/:id",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/dashboard",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/api/v1/tours",
-      "dest": "/server.js"
+      "dest": "/app.js"
     },
     {
       "src": "/api/v1/users",
-      "dest": "/server.js"
+      "dest": "/app.js"
     }
   ]
 }
