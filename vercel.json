@@ -8,32 +8,32 @@
   ],
   "routes": [
     {
+      "src": "/dashboard",
+      "dest": "/server.js"
+    },
+    {
       "src": "/dashboard/add",
-      "dest": "/app.js"
+      "dest": "/server.js"
     },
     {
       "src": "/dashboard/edit/:id",
-      "dest": "/app.js"
+      "dest": "/server.js"
     },
     {
       "src": "/dashboard/delete/:id",
-      "dest": "/app.js"
+      "dest": "/server.js"
     },
     {
       "src": "/dashboard/update/:id",
-      "dest": "/app.js"
-    },
-    {
-      "src": "/dashboard",
-      "dest": "/app.js"
+      "dest": "/server.js"
     },
     {
       "src": "/api/v1/tours",
-      "dest": "/app.js"
+      "dest": "/server.js"
     },
     {
       "src": "/api/v1/users",
-      "dest": "/app.js"
+      "dest": "/server.js"
     }
   ]
 }
