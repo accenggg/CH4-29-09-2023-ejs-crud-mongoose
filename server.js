@@ -8,7 +8,9 @@ const port = process.env.PORT || 3000
 
 // Mulai koneksi ke database
 mongoose
-  .connect(process.env.MONGODB_URI)
+  .connect(
+    "mongodb+srv://arsel-ganteng:Duaribuempat2004@tours-admin.wclrue0.mongodb.net/express"
+  )
   .then(async () => {
     console.log("DB sukses terkoneksi")
 

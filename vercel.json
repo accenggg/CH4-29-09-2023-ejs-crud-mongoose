@@ -35,8 +35,5 @@
       "src": "/api/v1/users",
       "dest": "/server.js"
     }
-  ],
-  "env": {
-    "MONGODB_URI": "@MONGODB_URI"
-  }
+  ]
 }
