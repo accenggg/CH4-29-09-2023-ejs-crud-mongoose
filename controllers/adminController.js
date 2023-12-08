@@ -3,6 +3,7 @@ const Tour = require("../models/tourModel")
 const toursPage = async (req, res) => {
   try {
     const tours = await Tour.find()
+    console.log("db:", tours)
     res.render("tours/index.ejs", {
       tours,
       message: req.flash("message", ""),

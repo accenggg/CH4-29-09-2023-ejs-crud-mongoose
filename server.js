@@ -1,20 +1,22 @@
 const dotenv = require("dotenv")
 dotenv.config()
 const mongoose = require("mongoose")
-
 const app = require("./app")
+// Modul untuk mengelola koneksi database
 
 const port = process.env.PORT || 3000
 
-const database = process.env.DATABASE_URI
-
+// Mulai koneksi ke database
 mongoose
-  .connect(database, {
-    useNewUrlParser: true,
-  })
-  .then(() => console.log("DB sukses terkoneksi"))
-  .catch((err) => console.log(err))
+  .connect(process.env.DATABASE_URI)
+  .then(async () => {
+    console.log("DB sukses terkoneksi")
 
-app.listen(port, () => {
-  console.log(`App running on port ${port}...`)
-})
+    // Jalankan aplikasi setelah koneksi database berhasil
+    app.listen(port, () => {
+      console.log(
+        `App running on port ${port}...`
+      )
+    })
+  })
+  .catch((err) => console.error(err))
